@@ -1,0 +1,89 @@
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: #333; /* Dunkelgraue Farbe */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #FF5733; /* Orange Farbe */
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #FF5733; /* Orange Farbe */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.login-button {
+    margin-left: auto; /* Align the login button to the right */
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 768px) {
+    .navbar-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-container.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+        align-self: center; /* Center the login button */
+    }
+}

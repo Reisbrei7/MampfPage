@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schöne Responsive Liste</title>
+  <style>
+    /* Allgemeines Styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    /* Container der Liste */
+    .responsive-list {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling der Listenelemente */
+    .responsive-list li {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Letztes Listenelement ohne Rand */
+    .responsive-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* SVG-Icon für jedes Listenelement */
+    .responsive-list li::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+      background-image: url('resources/sword-svgrepo-com.svg'); /* Beispiel-Icon */
+      background-size: cover;
+    }
+
+    /* Text in der Liste */
+    .responsive-list p {
+      margin: 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    /* Hover-Effekt */
+    .responsive-list li:hover {
+      background-color: #f0f0f5;
+    }
+
+    /* Responsive Styling für kleinere Bildschirme */
+    @media (max-width: 480px) {
+      .responsive-list li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .responsive-list li::before {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="responsive-list">
+  <ul>
+    <li>
+      <p>Erster Punkt in der Liste mit einem netten Icon und ansprechendem Design.</p>
+    </li>
+    <li>
+      <p>Zweiter Punkt – diese Liste passt sich auch an kleine Bildschirme an.</p>
+    </li>
+    <li>
+      <p>Dritter Punkt mit einem sanften Hover-Effekt für interaktive Benutzererfahrung.</p>
+    </li>
+    <li>
+      <p>Letzter Punkt – sauber gestaltet und einfach zu lesen.</p>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

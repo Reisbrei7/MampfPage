@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page mit Hover-Feuer Animation</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="navbar.css"> <!-- Styles for the navigation bar -->
+    <link rel="stylesheet" href="forms.css"> <!-- Styles for the login form -->
+    <link rel="stylesheet" href="animations.css"> <!-- Styles for animations -->
+    <link rel="stylesheet" href="header.css"> <!-- Styles for animations -->
+    <link rel="stylesheet" href="sections.css"> <!-- Styles for animations -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> <!-- Add a stamp-like font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Add a new font for the new section and events section -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Add a new font for better readability -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="new-section.html" class="nav-item">Total Tournament</a>
+            <a href="event.html" class="nav-item">Wichteln</a>
+            <a href="news.html" class="nav-item">News</a>
+            <a href="archiv.html" class="nav-item">Archiv</a>
+            <button class="cta-button login-button" onclick="showLoginMessage()">Login</button>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <img src="resources/burgerMenu.svg" alt="Menu">
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="login-form">
+        <form class="form-container">
+            <h2>Login</h2>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit" class="cta-button">Login</button>
+            <button type="button" class="cta-button cancel" onclick="closeLoginForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header" id="home">
+        <h1>Willkommen auf der Homepage des Mampf Clans</h1>
+        <p>Schön, dass du da bist! Du befindest dich auf der offiziellen Homepage des Mampf Clans, deinem zentralen Anlaufpunkt für alles rund um unsere Community. Hier findest du aktuelle Updates, spannende Ankündigungen und alle wichtigen Links zu unseren Inhalten. Ob du dich über neue Entwicklungen informieren möchtest oder einfach die letzten Highlights der Mampf-Community nachholen willst – hier bist du genau richtig. Also tauch ein, schau dich um, und werde Teil unserer Welt!</p>
+    </header>
+
+    <!-- Features Section (Grid Layout) -->
+    <section class="features">
+        <a href="https://open.spotify.com/show/41Ih3sLbQtd8s8O1ekxOrv" class="feature-item">
+            <div class="feature-text">Burg Mampfenstein</div>
+            <object class="corner-icon" type="image/svg+xml" data="resources/Spotify_logo_with_text.svg"></object>
+            <video src="resources/vecteezy_fire-burning-hot-sparks-rising-background_1806575_converted.mp4" class="spark-animation" muted loop></video>
+            <img src="resources/Burgmampfenstein.jfif" alt="Feature 1" class="feature-image">
+            <img src="resources/Animation-1730800824308.gif" alt="Feuer Animation" class="fire-animation">
+        </a>
+        <a href="https://www.twitch.tv/mampf_gaming" class="feature-item">
+            <div class="feature-text">[Mampf] Gaming Twitch</div>
+            <object class="corner-icon" type="image/svg+xml" data="resources/Twitch_logo.svg"></object>
+            <video src="resources/vecteezy_fire-burning-hot-sparks-rising-background_1806575_converted.mp4" class="spark-animation" muted loop></video>
+            <img src="resources/Twitch.JPG" alt="Feature 2" class="feature-image">
+            <img src="resources/Animation-1730800824308.gif" alt="Feuer Animation" class="fire-animation">
+        </a>
+        <a href="https://www.youtube.com/@mampf4068" class="feature-item">
+            <div class="feature-text">[Mampf] Gaming Youtube</div>
+            <object class="corner-icon" type="image/svg+xml" data="resources/YouTube_Logo_2017.svg"></object>
+            <video src="resources/vecteezy_fire-burning-hot-sparks-rising-background_1806575_converted.mp4" class="spark-animation" muted loop></video>
+            <img src="resources/Youtube.JPG" alt="Feature 3" class="feature-image">
+            <img src="resources/Animation-1730800824308.gif" alt="Feuer Animation" class="fire-animation">
+        </a>
+        <a href="https://discord.com" class="feature-item">
+            <div class="feature-text">Discord Community</div>
+            <object class="corner-icon" type="image/svg+xml" data="resources/discord-logo-blue.svg"></object>
+            <video src="resources/vecteezy_fire-burning-hot-sparks-rising-background_1806575_converted.mp4" class="spark-animation" muted loop></video>
+            <img src="resources/Discord.jfif" alt="Feature 4" class="feature-image">
+            <img src="resources/Animation-1730800824308.gif" alt="Feuer Animation" class="fire-animation">
+        </a>
+    </section>
+
+    <!-- New Section -->
+    <section class="new-section">
+        <div class="new-section-content">
+            <a href="new-section.html" class="new-section-image">
+                <img src="resources/Total_War_Warhammer_3_cover_art.jpg" alt="Total War Warhammer 3 Cover Art">
+                <div class="stamp-text">Total Tournament</div>
+            </a>
+            <div class="new-section-text">
+                <h2>Willkommen beim Total Tournament: Epische Schlachten, fesselnde Allianzen und grenzenlose Spannung!</h2>
+                <p>Im Total Tournament treten drei mutige Teams in einer mitreißenden Multiplayer-Kampagne von Total War: Warhammer III gegeneinander an:</p>
+                <div class="responsive-list">
+                    <ul>
+                      <li>
+                        <p>Die Unfortunate Sons (Flucki und Smontag)</p>
+                      </li>
+                      <li>
+                        <p>Die Spooky Chaos Skelletons (Alex und Michi)</p>
+                      </li>
+                      <li>
+                        <p>Der Schädel Clan (Martin und Stefan)</p>
+                      </li>
+                    </ul>
+                  </div>
+                <p>Sie kämpfen um die Vorherrschaft in der von Chaos geplagten Fantasy-Welt. In Total War, einem einzigartigen Mix aus rundenbasierter Strategie und epischen Echtzeit-Schlachten, plant jeder Spieler klug seine nächsten Züge, um seine Fraktion zum Sieg zu führen – sei es durch Diplomatie, übermächtige Armeen oder geschickte Intrigen.</p>
+                <p>Begleite die Kampagne, indem du den Podcast Burg Mampfenstein hörst, wo wir regelmäßig die neusten Entwicklungen und unerwartete Wendungen besprechen! Tauche ein in die Welt von Total War und verpasse keine Intrige, kein Bündnis und keine Schlacht. Halte dich auf unserer Website auf dem Laufenden und werde Teil dieses epischen Abenteuers!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section">
+        <div class="event-item">
+            <a href="event.html" class="event-image">
+                <img src="resources/Nipperhouse.jfif" alt="Event Image">
+            </a>
+            <div class="event-text">
+                <h3>Mampfi Wichteln – Das Fest der Frags!</h3>
+                <p>Datum: 20.12.2024</p>
+                <p>Bereit für das nächste große Event des Jahres? Am 20. Dezember laden wir euch zum legendären Mampfi Wichteln ein! Schnappt euch eure besten Taktiken und stimmt euch auf hitzige Matches ein, denn wir werden uns auf unserer Lieblingskarte Xmas_Nipperhouse in Counter-Strike messen. Doch das ist noch nicht alles – wir haben den 682er Clan, unsere Freunde und Rivalen, ebenfalls eingeladen, um die Herausforderung so richtig spannend zu machen!</p>
+                <p>Markiert euch das Datum im Kalender und macht euch auf ein Event gefasst, das ihr nicht verpassen wollt. Es könnte sogar eine kleine Überraschung geben … also seid gespannt und freut euch auf ein unvergessliches Wichteln mit uns!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Danke fürs vorbeischauen!</h2>
+        <p>Zur offiziellen Heimat der Mampfis</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
